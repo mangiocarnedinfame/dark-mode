@@ -111,7 +111,7 @@
       items.forEach(it => it.classList.remove('selected'));
       items[i].classList.add('selected');
       if (smooth) el.classList.add('smooth-scroll'); else el.classList.remove('smooth-scroll');
-      el.scrollTo({ top: padPx + i * ITEM_H(), behavior: smooth ? 'smooth' : 'auto' });
+      el.scrollTo({ top: i * ITEM_H(), behavior: smooth ? 'smooth' : 'auto' });
     }
     selectIndex(selectedIndex, false);
 
@@ -123,14 +123,14 @@
         // Debounce with small delay
         clearTimeout(el._snapT);
         el._snapT = setTimeout(() => {
-          const i = Math.round((el.scrollTop - padPx) / ITEM_H());
+          const i = Math.round(el.scrollTop / ITEM_H());
           selectIndex(i, true);
         }, 80);
       });
     });
 
     el.getSelected = () => {
-      const i = Math.round((el.scrollTop - padPx) / ITEM_H());
+      const i = Math.round(el.scrollTop / ITEM_H());
       return { index: i, value: values[i] };
     };
     el.setSelectedIndex = (i) => selectIndex(i, false);
