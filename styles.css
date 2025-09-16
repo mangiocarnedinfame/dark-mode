@@ -26,8 +26,8 @@ html,body{height:100%}
 body{
   margin:0;
   font-family:var(--font-sans);
-  background:linear-gradient(180deg, var(--bg-grad-start) 0%, var(--bg-grad-end) 100%); /* CHANGED */
-  color:var(--text); /* CHANGED */
+  background:linear-gradient(180deg, var(--bg-grad-start) 0%, var(--bg-grad-end) 100%);
+  color:var(--text);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   display:flex;
@@ -40,8 +40,10 @@ body{
 
 /* ======= Theme toggle (top-right) ======= */
 .theme-toggle{
-  position:absolute;
-  top:10px; right:10px;
+  position: fixed; /* spostato da absolute a fixed */
+  top: calc(8px + env(safe-area-inset-top));
+  right: calc(8px + env(safe-area-inset-right));
+  z-index: 2000; /* sopra a tutto */
   width:44px; height:44px;
   border-radius:12px;
   border:1px solid rgba(255,255,255,0.08);
@@ -326,4 +328,41 @@ body[data-theme="light"] .btn.secondary{
 }
 body[data-theme="light"] .phase-label{
   color:#0f172a; text-shadow:none;
+}
+
+/* === Light mode: overlay & picker (wheel) === */
+body[data-theme="light"] .overlay{
+  background: linear-gradient(0deg, rgba(255,255,255,0.55), rgba(255,255,255,0.55));
+}
+body[data-theme="light"] .picker{
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(245,248,252,0.96));
+  color:#0f172a;
+}
+body[data-theme="light"] .picker-footer{
+  background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.04));
+  box-shadow: 0 -6px 28px rgba(0,0,0,0.08);
+}
+
+/* Wheel container (light) */
+body[data-theme="light"] .wheel{
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(245,248,252,0.92));
+  border:1px solid rgba(0,0,0,0.06);
+}
+body[data-theme="light"] .wheel::after{
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,0.06);
+  background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01));
+}
+/* Elemento selezionato nella wheel (light) */
+body[data-theme="light"] .wheel-item.selected{
+  color:#0f172a;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.16);
+}
+
+/* === Light mode: live timer === */
+body[data-theme="light"] .live .ring-bg{ stroke: var(--ring-bg); }
+body[data-theme="light"] .live .ring{    stroke: var(--accent-start); }
+body[data-theme="light"] .live-clock{
+  background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(240,243,247,0.88));
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.9);
+  border:1px solid rgba(0,0,0,0.06);
 }
