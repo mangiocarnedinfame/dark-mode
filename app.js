@@ -96,6 +96,14 @@
     const bottomSpacer = document.createElement('li'); bottomSpacer.className = 'spacer'; ul.appendChild(bottomSpacer);
     el.appendChild(ul);
 
+    function syncMarker(){
+    // Mantiene il quadratino fermo al centro mentre la lista scorre
+      el.style.setProperty('--wheelScroll', el.scrollTop + 'px');
+  }
+    el.addEventListener('scroll', syncMarker, { passive: true });
+    syncMarker(); // inizializza
+
+
     let padPx = 0;
     function setSpacers(){
       const h = el.clientHeight;
