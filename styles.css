@@ -153,7 +153,7 @@ body[data-theme="light"] .theme-toggle .icon-moon{ display:block }
   stroke-width: 16px; /* prima 12px, alza finché ti piace */
 }
 .phase-label{
-  font-size:66px;
+  font-size:61px;
   font-weight:1000;
   letter-spacing:1.2px;
   color:#fff;
