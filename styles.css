@@ -266,7 +266,7 @@ body[data-theme="light"] .theme-toggle .icon-moon{ display:block }
 .spacer{ pointer-events:none; visibility:hidden; height:var(--wheel-item-h); scroll-snap-align: none !important; }
 .wheel::after{
   content:""; position:absolute; left:12px; right:12px; height:var(--wheel-item-h);
-  top: 50%; border-radius:20;
+  top: 50%; border-radius:16px;
   transform: translateY(calc(-50% + var(--wheelScroll, 0px)));
   box-shadow: inset 0 0 0 2px rgba(255,255,255,0.02);
   background: linear-gradient(180deg, rgba(255,255,255,0.006), rgba(0,0,0,0.02)); z-index: 1;
@@ -274,7 +274,7 @@ body[data-theme="light"] .theme-toggle .icon-moon{ display:block }
 .wheel-item.selected{
   color: #031011;
   background: linear-gradient(90deg,var(--accent-start),var(--accent-mid));
-  border-radius:32px;
+  border-radius:67px;
   transform: translateZ(52px) scale(1.12);
   text-shadow: 0 20px 60px rgba(0,0,0,0.6);
   box-shadow: 0 26px 88px rgba(3,6,9,0.68);
