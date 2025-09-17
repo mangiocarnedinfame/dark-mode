@@ -274,7 +274,7 @@ body[data-theme="light"] .theme-toggle .icon-moon{ display:block }
 .wheel-item.selected{
   color: #031011;
   background: linear-gradient(90deg,var(--accent-start),var(--accent-mid));
-  border-radius:12px;
+  border-radius:32px;
   transform: translateZ(52px) scale(1.12);
   text-shadow: 0 20px 60px rgba(0,0,0,0.6);
   box-shadow: 0 26px 88px rgba(3,6,9,0.68);
