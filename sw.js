@@ -2,7 +2,7 @@
    IMPORTANTE: ogni volta che modifichi index.html, styles.css o app.js,
    cambia il numero di versione qui sotto (v1 → v2 → v3...).
    Senza quello l'app continuerebbe a mostrare la copia vecchia. */
-var VERSION = 'interval-timer-v1';
+var VERSION = 'interval-timer-v2';
 
 var ASSETS = [
   './',
