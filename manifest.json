@@ -1,0 +1,12 @@
+{
+  "name": "Gym Timer",
+  "short_name": "Gym Timer",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f3ed",
+  "theme_color": "#f5f3ed",
+  "orientation": "landscape",
+  "icons": [
+    { "src": "icon-180.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
