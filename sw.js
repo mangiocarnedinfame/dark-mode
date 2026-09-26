@@ -1,5 +1,5 @@
 /* Cache offline: dopo il primo caricamento l'app funziona senza rete */
-var CACHE="interval-v17";
+var CACHE="interval-v18";
 var FILES=["./","index.html","manifest.json","icon-152.png","icon-167.png","icon-180.png","icon-192.png","icon-512.png",
   "daydream_3/Daydream%20DEMO.otf","04b_30/04B_30__.TTF"];
 self.addEventListener("install",function(e){
